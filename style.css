@@ -1,8 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Reset some default browser styles */
+body, h1, h2, p, form, div {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
@@ -10,39 +21,82 @@ body {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
     text-align: center;
+    color: #4a90e2;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .question-block {
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #f1f5f8;
+    border: 1px solid #dde1e7;
+    border-radius: 5px;
+    padding: 15px;
     margin-bottom: 10px;
 }
 
 .question-input, .option-input, .correct-answer {
     display: block;
-    width: 100%;
-    margin-bottom: 10px;
+    width: calc(100% - 30px);
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dde1e7;
+    border-radius: 5px;
+}
+
+.correct-answer {
+    width: 50%;
 }
 
 button {
-    padding: 10px;
-    background-color: #007BFF;
+    padding: 10px 20px;
+    background-color: #4a90e2;
     color: white;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #357ab8;
+}
+
+#take-quiz {
+    margin-top: 30px;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-block p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.question-block label {
+    display: block;
+    margin: 5px 0;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #4a90e2;
 }
