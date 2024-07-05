@@ -107,4 +107,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resultDiv.innerHTML = `You scored ${score} out of ${quiz.length}`;
         submitQuizButton.style.display = 'none';
-   
+    });
+});
